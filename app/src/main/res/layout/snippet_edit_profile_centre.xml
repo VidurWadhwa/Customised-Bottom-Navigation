@@ -1,0 +1,312 @@
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:id="@+id/Relative_edit_centre"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_editable_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="17dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/change_profile_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_editable_image"
+                android:layout_marginTop="10dp"
+                android:text="Change Profile Picture"
+                android:textAlignment="center"
+                android:textColor="@color/blue" />
+
+            <RelativeLayout
+                android:id="@+id/name_edit_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/change_profile_pic"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:id="@+id/change_name_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_edit_name" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Name"
+                    android:layout_toRightOf="@+id/change_name_icon"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:id="@+id/edit_name"
+                    android:text="Vidur Wadhwa"
+                    android:textSize="20dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/change_name_icon"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/grey"
+                    >
+
+
+                </View>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/nickname_edit_layout"
+                android:layout_below="@+id/name_edit_layout">
+                <ImageView
+                    android:id="@+id/change_nickname_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_edit_nickname_icon" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nick Name"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/edit_nickname"
+                    android:layout_toRightOf="@+id/change_nickname_icon"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:text="WadVid"
+                    android:textSize="20dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/change_nickname_icon"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/grey">
+
+
+                </View>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/edit_website_layout"
+                android:layout_below="@+id/nickname_edit_layout"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/change_website_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_website" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Website"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/edit_website"
+                    android:layout_toRightOf="@+id/change_website_icon"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:text="https://www.vidur.com"
+                    android:textSize="20dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/change_website_icon"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/grey">
+
+
+                </View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/edit_bio_layout"
+                android:layout_below="@+id/edit_website_layout"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/change_bio_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_bio" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Bio"
+                    android:id="@+id/edit_bio"
+                    android:layout_toRightOf="@+id/change_bio_icon"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:text="I live in Vancouver"
+                    android:textSize="20dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/change_bio_icon"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/grey">
+
+                </View>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_bio_layout"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Private Information"
+                    android:textSize="25dp"
+                    android:id="@+id/static_text"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/static_text"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/ruler"
+                    android:background="@color/grey"
+                    android:padding="5dp">
+
+
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/layout_change_mail"
+                    android:layout_below="@+id/ruler"
+                    android:layout_marginTop="10dp">
+
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_mail"
+                        android:id="@+id/email_icon"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/edit_mail"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/email_icon"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="20dp"
+                        android:text="vidur2wadhwa@gmail.com"/>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/email_icon"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/grey">
+
+                    </View>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/layout_change_mail"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_mobile"
+                        android:id="@+id/mobile_icon"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/edit_mobile"
+                        android:layout_height="wrap_content"
+                        android:hint="Mobile"
+                        android:layout_toRightOf="@+id/mobile_icon"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="20dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/mobile_icon"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/grey">
+
+                    </View>
+
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</merge>
