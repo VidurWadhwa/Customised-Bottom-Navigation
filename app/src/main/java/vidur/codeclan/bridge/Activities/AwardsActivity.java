@@ -12,7 +12,7 @@ import vidur.codeclan.bridge.R;
 import vidur.codeclan.bridge.Utils.bottomNavViewHelper;
 
 public class AwardsActivity extends AppCompatActivity {
-    private static final int number = 4;
+    private static final int number = 3;
     private static final String TAG = "AwardsActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
