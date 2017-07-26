@@ -18,17 +18,29 @@ public class SectionsStatePagerAdapter extends FragmentStatePagerAdapter {
 
     private HashMap<Fragment, Integer> fragmentIntegerHashMap = new HashMap<>();
 
+    private HashMap<String, Integer> fragmentNumbers = new HashMap<>();
+
+    private HashMap<Integer, String> fragmentNames = new HashMap<>();
+
     public SectionsStatePagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
     @Override
     public Fragment getItem(int position) {
-        return null;
+        return fragmentList.get(position);
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return fragmentList.size();
+    }
+
+    public void addFragment(Fragment fragment, String name){
+        fragmentList.add(fragment);
+        fragmentIntegerHashMap.put(fragment, (getCount()-1));
+        fragmentNumbers.put(name, (getCount()-1));
+        fragmentNames.put((getCount() - 1), name);
+
     }
 }
