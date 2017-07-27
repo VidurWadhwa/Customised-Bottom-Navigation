@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "7467676218",
+    "firebase_url": "https://insta-clone-56a81.firebaseio.com",
+    "project_id": "insta-clone-56a81",
+    "storage_bucket": "insta-clone-56a81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7467676218:android:94d4b0856e898f70",
+        "android_client_info": {
+          "package_name": "vidur.codeclan.bridge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "7467676218-s9je2ckotu87cr0eb3emrunvpo8qle8m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vidur.codeclan.bridge",
+            "certificate_hash": "44d1ee4d98d1c8bdbb5e64cbb2707d4354a65a6c"
+          }
+        },
+        {
+          "client_id": "7467676218-63570r8nq95furaatq2b6l228d83uf26.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp9DQXEA2l7oN9D4_iZe5YvVJJUa-MhQ8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7467676218-63570r8nq95furaatq2b6l228d83uf26.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

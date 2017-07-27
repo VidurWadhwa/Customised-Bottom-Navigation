@@ -25,7 +25,7 @@ import vidur.codeclan.bridge.Utils.bottomNavViewHelper;
 public class ResultActivity extends AppCompatActivity {
 
     private static final String TAG = "ResultActivity";
-    private static final int number = 4;
+    private static final int number = 3;
     private ProgressBar progressBar;
     ImageView iv_profile;
     int NUM_GRID_COLUMNS = 3;
@@ -98,7 +98,7 @@ public class ResultActivity extends AppCompatActivity {
         mImageUrl.add("https://lh4.ggpht.com/mJDgTDUOtIyHcrb69WM0cpaxFwCNW6f0VQ2ExA7dMKpMDrZ0A6ta64OCX3H-NMdRd20=w300");
         mImageUrl.add("https://www.donationcoder.com/Software/Mouser/urlsnooper/screenshots/Screenshot_main.gif");
         mImageUrl.add("http://urlprofiler.com/wp-content/themes/urlprofiler/images/_majestic.png");
-        mImageUrl.add("https://resources.whatwg.org/logo-url.svg");
+        mImageUrl.add("http://urlprofiler.com/wp-content/themes/urlprofiler/images/_majestic.png");
         mImageUrl.add("http://www.openvalley-web.com/wp-content/uploads/2012/08/seo-url-structure.jpg");
         mImageUrl.add("http://complexspiral.com/events/archive/2004/uiuc/keynote/my-url-is.png");
         mImageUrl.add("https://www.rankwatch.com/learning/sites/default/files/sectionimg/S2_0.png");

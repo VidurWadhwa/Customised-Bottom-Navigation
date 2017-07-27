@@ -29,7 +29,7 @@ public class bottomNavViewHelper {
         bnav.enableAnimation(false);
         bnav.enableItemShiftingMode(false);
         bnav.enableShiftingMode(false);
-        bnav.setTextVisibility(false);
+        //bnav.setTextVisibility(false);
     }
 
     public static void enableNav(final Context c, BottomNavigationViewEx bottomNavigationViewEx){
@@ -54,10 +54,6 @@ public class bottomNavViewHelper {
                         c.startActivity(intent3);
                         break;
 
-                    case R.id.ic_awards:
-                        Intent intent4 = new Intent(c, AwardsActivity.class);
-                        c.startActivity(intent4);
-                        break;
 
                     case R.id.ic_result:
                         Intent intent5 = new Intent(c, ResultActivity.class);

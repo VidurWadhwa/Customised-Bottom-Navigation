@@ -26,7 +26,7 @@ import vidur.codeclan.bridge.Utils.bottomNavViewHelper;
 
 public class AccountSettingsActivity extends AppCompatActivity {
 
-    private static final int number = 4;
+    private static final int number = 3;
     private SectionsStatePagerAdapter mAdapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
 
     private ViewPager vpager;
