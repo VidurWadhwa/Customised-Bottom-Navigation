@@ -1,9 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_margin="10dp"
     android:layout_height="match_parent"
     tools:context="vidur.codeclan.bridge.Activities.LoginActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/if_instagram"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:id="@+id/login_email"
+            android:inputType="textEmailAddress"
+
+            android:layout_marginTop="30dp"
+            android:hint="Email"/>
+
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:id="@+id/login_password"
+            android:layout_below="@+id/login_email"
+            android:layout_alignParentStart="true" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_password"
+            android:layout_centerHorizontal="true"
+            android:text="Login"
+            android:id="@+id/bt_login"
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bt_login"
+            android:id="@+id/tv_register"
+            android:textColor="@color/blue"
+            android:layout_marginTop="20dp"
+            android:text="No Account yet? Create one."
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/login_progress"/>
+
+
+
+</RelativeLayout>
