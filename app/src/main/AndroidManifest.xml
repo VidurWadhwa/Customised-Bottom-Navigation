@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="vidur.codeclan.bridge">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,7 +22,8 @@
         <activity android:name=".Activities.AwardsActivity" />
         <activity android:name=".Activities.NoticeActivity" />
         <activity android:name=".Activities.AcademicsActivity" />
-        <activity android:name=".Activities.AccountSettingsActivity"></activity>
+        <activity android:name=".Activities.AccountSettingsActivity" />
+        <activity android:name=".Activities.LoginActivity"></activity>
     </application>
 
 </manifest>

@@ -9,12 +9,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import vidur.codeclan.bridge.Adapters.HomeFragmentPagerAdapter;
 import vidur.codeclan.bridge.Fragments.CameraFragment;
 import vidur.codeclan.bridge.Fragments.HomeFragment;
 import vidur.codeclan.bridge.Fragments.MessagesFragment;
 import vidur.codeclan.bridge.R;
+import vidur.codeclan.bridge.Utils.UniversalImageLoader;
 import vidur.codeclan.bridge.Utils.bottomNavViewHelper;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ConfigLoader();
         setUpNav();
         setUpTabs();
         
@@ -63,6 +66,13 @@ public class MainActivity extends AppCompatActivity {
         Menu menu = bottomNavigationViewEx.getMenu();
         MenuItem menuItem = menu.getItem(number);
         menuItem.setChecked(true);
+
+    }
+
+    public void ConfigLoader() {
+
+        UniversalImageLoader universalImageLoader = new UniversalImageLoader(MainActivity.this);
+        ImageLoader.getInstance().init(universalImageLoader.getInstance());
 
     }
 

@@ -51,7 +51,7 @@ public class UniversalImageLoader {
 //    Can only used set if the images are static and are not setup for
 //    a list view or grid view
 
-    public void setImage(String ImageUrl, ImageView iv_put, final ProgressBar mProgressBar, String append) {
+    public static void setImage(String ImageUrl, ImageView iv_put, final ProgressBar mProgressBar, String append) {
         //append is to get the various types of files like from the web or drawables
         //https://github.com/VidurWadhwa/Android-Universal-Image-Loader
 
