@@ -10,8 +10,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import vidur.codeclan.bridge.POJO.User;
+import vidur.codeclan.bridge.POJO.UserAccountSettings;
 import vidur.codeclan.bridge.R;
 
 /**
@@ -19,14 +22,22 @@ import vidur.codeclan.bridge.R;
  */
 
 public class FireBaseMethods {
+
     private static final String TAG = "FireBaseMethods";
+
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+
     private String UserID;
     Context c;
 
+    private FirebaseDatabase database;
+    private DatabaseReference myRef;
+
     public FireBaseMethods(Context c) {
         this.c = c;
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference();
         mAuth = FirebaseAuth.getInstance();
         if(mAuth.getCurrentUser() != null) {
             UserID = mAuth.getCurrentUser().getUid();
@@ -34,16 +45,17 @@ public class FireBaseMethods {
     }
 
 
-    /*
+    /**
     ----------------------------------------------------------- Check UserName
     */
 
     public boolean checkName(String username, DataSnapshot dataSnapshot) {
         Log.d(TAG, "checkName: Checking name");
         User user = new User();
-        for(DataSnapshot dsp: dataSnapshot.getChildren()){
+        for(DataSnapshot dsp: dataSnapshot.child(UserID).getChildren()){
 
             Log.d(TAG, "checkName: Looping through data " + dsp.toString());
+            //user.setUsername(dsp.getCgetValue(User.class).getUsername());
             user.setUsername(dsp.getValue(User.class).getUsername());
             Log.d(TAG, "checkName: Username is" + user.getUsername());
             if(StringManipulator.expandUsername(user.getUsername()).equals(username)){
@@ -55,15 +67,13 @@ public class FireBaseMethods {
         return false;
     }
 
+    /**
+     * -----------------------------------------------------------------------------------------------------------------------------------------
+     */
 
 
-
-
-
-
-
-    /*
-    ----------------------------------------------------------- Register a new User
+    /**
+    ---------------------------------------------------------------------------------------------------------------------------Register a new User
     */
 
     public void registerUser(String email, String password, String username) {
@@ -93,5 +103,29 @@ public class FireBaseMethods {
                     }
                 });
     }
+
+    /**
+     * -----------------------------------------------------------------------------------------------------------------------------------------
+     */
+
+    /**
+     * ---------------------------------------------------------------------------------------------------------------- Add a new User to the database
+     */
+
+    public void addNewUser(String description, String username, String profile_photo, String website, String email) {
+
+        User user = new User(email, UserID, StringManipulator.condenseUsername(username), 1);
+
+        myRef.child("user_edit").child(UserID).setValue(user);
+
+        UserAccountSettings userAccountSettings = new UserAccountSettings(description, username,
+                                                    0, 0, 0, "",
+                                                    username, website);
+
+        myRef.child("user_account_settings").child(UserID).setValue(userAccountSettings);
+
+
+    }
+
 
 }

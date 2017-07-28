@@ -84,6 +84,8 @@ public class RegisterActivity extends AppCompatActivity {
      */
 
     private void init() {
+        Log.d(TAG, "init: In init");
+
         bt_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,6 +98,7 @@ public class RegisterActivity extends AppCompatActivity {
                     progressBar.setVisibility(View.VISIBLE);
                     //As soon as this method is called the the AuthState would become signed in if it is true
                     methods.registerUser(email, password, username);
+                    progressBar.setVisibility(View.GONE);
                 }
             }
         });
@@ -108,6 +111,7 @@ public class RegisterActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
+
 
             //This method will be called whenever there is addition or change in the authentication of the user
             @Override
@@ -134,6 +138,15 @@ public class RegisterActivity extends AppCompatActivity {
                             }
 
                             //Add new User to the database or add new account settings to the database
+
+
+                            /**
+                             * Method call to add a new user to the database........................
+                             */
+
+                            methods.addNewUser(username, username, "", "www.get.com", email);
+
+
                         }
 
                         @Override

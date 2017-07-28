@@ -8,7 +8,7 @@ public class User {
     String email;
     String user_id;
     String username;
-    String mobile_number;
+    long mobile_number;
 
     public User(){
 
@@ -36,7 +36,7 @@ public class User {
         this.username = username;
     }
 
-    public void setMobile_number(String mobile_number) {
+    public void setMobile_number(long mobile_number) {
         this.mobile_number = mobile_number;
     }
 
@@ -53,11 +53,11 @@ public class User {
         return username;
     }
 
-    public String getMobile_number() {
+    public long getMobile_number() {
         return mobile_number;
     }
 
-    public User(String email, String user_id, String username, String mobile_number) {
+    public User(String email, String user_id, String username, long mobile_number) {
 
         this.email = email;
         this.user_id = user_id;
